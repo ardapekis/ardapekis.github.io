@@ -1,7 +1,15 @@
+<!-- "Video For Everybody" v0.4.1 by Kroc Camen of Camen Design <camendesign.com/code/video_for_everybody>
+     =================================================================================================================== -->
+<!-- first try HTML5 playback: if serving as XML, expand `controls` to `controls="controls"` and autoplay likewise       -->
+<!-- warning: playback does not work on iPad/iPhone if you include the poster attribute! fixed in iOS4.0                 -->
 <video width="640" height="360" controls preload="none">
     <!-- MP4 must be first for iPad! -->
     <source src="out5.mp4" type="video/mp4" /><!-- WebKit video    -->
+    <source src="out5.webm" type="video/webm" /><!-- Chrome / Newest versions of Firefox and Opera -->
+    <source src="out5.ogv" type="video/ogg" /><!-- Firefox / Opera -->
 </video>
+<!-- you *must* offer a download link as they may be able to play the file locally. customise this bit all you want -->
 <p> <strong>Download Video:</strong>
-    Closed Format:  <a href="out5.MP4">"MP4"</a>
+    Closed Format:  <a href="out5.mp4">"MP4"</a>
+    Open Format:    <a href="out5.mp4">"OGG"</a>
 </p>
